@@ -16,6 +16,7 @@ using OsEngine.Robots.MarketMaker;
 using OsEngine.Robots.MyRobot12.Models;
 using OsEngine.Robots.OnScriptIndicators;
 using OsEngine.Robots.Patterns;
+using OsEngine.Robots.PriceChannel;
 using OsEngine.Robots.Screeners;
 using OsEngine.Robots.Trend;
 using System;
@@ -40,6 +41,7 @@ namespace OsEngine.Robots
         public static List<string> GetNamesStrategy()
         {
             List<string> result = new List<string>();
+            result.Add("PriceChannelFix");
             result.Add("FrontRunnerBot");
             result.Add("MyRobot");
             result.Add("MyRobot1");
@@ -123,7 +125,11 @@ namespace OsEngine.Robots
                 bot = CreateScriptStrategyByName(nameClass, name, startProgram);
                 return bot;
             }
-            
+
+            if (nameClass == "PriceChannelFix")
+            {
+                bot = new PriceChannelFix(name, startProgram);
+            }
             if (nameClass == "FrontRunnerBot")
             {
                 bot = new FrontRunnerBot(name, startProgram);
@@ -259,10 +265,10 @@ namespace OsEngine.Robots
             {
                 bot = new ParabolicSarTrade(name, startProgram);
             }
-            if (nameClass == "PriceChannelTrade")
-            {
-                bot = new PriceChannelTrade(name, startProgram);
-            }
+            //if (nameClass == "PriceChannelTrade")
+            //{
+            //    bot = new PriceChannelTrade(name, startProgram);
+            //}
             if (nameClass == "WilliamsRangeTrade")
             {
                 bot = new WilliamsRangeTrade(name, startProgram);

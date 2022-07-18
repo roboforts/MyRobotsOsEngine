@@ -17,6 +17,8 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -31,8 +33,6 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>x64</PlatformTarget>
@@ -927,6 +927,7 @@
     <Compile Include="Robots\OnScriptIndicators\RviTrade.cs" />
     <Compile Include="Robots\OnScriptIndicators\SmaTrendSample.cs" />
     <Compile Include="Robots\OnScriptIndicators\TimeOfDayBot.cs" />
+    <Compile Include="Robots\PriceChannel\PriceChannelFix.cs" />
     <Compile Include="Robots\Screeners\SmaScreener.cs" />
     <Compile Include="Robots\Trend\EnvelopTrend.cs" />
     <Compile Include="Robots\Trend\MomentumMacd.cs" />
